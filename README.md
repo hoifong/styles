@@ -1,18 +1,21 @@
-<h1> 本项目为记录用于前端开发的常用基础样式</h1>
-> <h2>纯CSS部分</h2>
-不参杂js代码
-> > <h3>基本样式</h3>
-<ul>
-<li></li>
-<li></li>
-</ul>
+本项目为记录用于前端开发的常用基础样式
+===
+>##纯CSS部分
+*不参杂js代码*
 
-> > <h3>动画</h3>
-<ul>
-<li></li>
-<li></li>
-</ul>
+[basic]:https://hoifong.github.io/styles/pure-css/basic
+>>###[基本样式][basic]
+- [初始化](https://hoifong.github.io/styles/pure-css/basic/init.html)
+- [居中](https://hoifong.github.io/styles/pure-css/basic/center.html)
+- [输入框](https://hoifong.github.io/styles/pure-css/basic/input.html)
 
-> <h2>javascript部分</h2>
-js代码实现
-> > ~~
+[animation]:https://hoifong.github.io/styles/pure-css/animation
+>>###[动画][animation]
+- .
+- .
+- .
+
+
+>##javascript部分
+*js代码辅助实现*
+>> ~~
