@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中(center)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .give-height-s{
+            height:100px;
+        }
+        .give-width-s{
+            width: 100px;
+        }
+        .give-height{
+            height:200px;
+        }
+        .give-width{
+            width:200px
+        }
+        .give-border{
+            border: 1px solid;
+        }
+        p,.give-bgcolor{
+            background-color: bisque;
+        }
+        .h-center-text{
+            text-align: center;
+        }
+        .v-center-text{
+            height: 100px;
+            line-height: 100px;
+        }
+        .h-center-block-1{
+            margin: auto;
+        }
+        .h-center-block-2{
+            position: relative;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+        .v-center-block-2{
+            position: relative;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3>1、（单行）文字/行内元素居中</h3>
+    <p class="h-center-text give-border">这是一行文字(设置text-align水平居中)</p>
+    <p class="v-center-text give-border">这是一行文字(设置line-height 垂直居中)</p>
+    <h3>2、(多行)块级元素居中</h3>
+    <div class="give-width give-border">
+        <p class="give-width-s h-center-block-1 give-border">这是设置了固定宽度的一个div(设置margin:auto水平居中)</p>
+        <p class="give-width-s h-center-block-2 give-border">这是设置了固定宽度的一个div(设置定位和x位移水平居中)</p>
+    </div>
+    <div class="give-height give-border">
+        <p class="give-height-s v-center-block-2 give-border">这是设置了固定高度的一个div(设置定位和y位移垂直居中)</p>
+    </div>
+</div>
+</body>
+</html>
