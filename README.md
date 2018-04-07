@@ -8,6 +8,7 @@
 - [初始化](https://hoifong.github.io/styles/pure-css/basic/init.html)
 - [居中](https://hoifong.github.io/styles/pure-css/basic/center.html)
 - [输入框](https://hoifong.github.io/styles/pure-css/basic/input.html)
+- [滚动条](https://hoifong.github.io/styles/pure-css/basic/scrollbar.html)
 
 [animation]:https://hoifong.github.io/styles/pure-css/animation
 >>###[动画][animation]

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动条(scroll bar)</title>
+    <style>
+        #box::-webkit-scrollbar
+        {
+            width: 16px;
+            height: 16px;
+            /*background-color: #453865;*/
+            opacity: .7;
+        }
+        /*定义滚动条轨道 内阴影+圆角*/
+        #box::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #FFFF00;
+        }
+        #box::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #FF00FF;
+        }
+        /*ie下*/
+        #box{
+            scrollbar-arrow-color: #ff0;
+            /*滚动条滑块按钮的颜色*/
+            scrollbar-face-color: #f00;
+            /*滚动条整体颜色*/
+            scrollbar-highlight-color: #393;
+            /*滚动条阴影*/
+            scrollbar-shadow-color: #acc;
+            /*滚动条轨道颜色*/
+            scrollbar-track-color: #a66;
+        }
+</style>
+</head>
+<body>
+<div></div>
+<pre>
+    ::-webkit-scrollbar //滚动条整体部分，其中的属性有width,height,background,border（就和一个块级元素一样）等。（位置1）
+    ::-webkit-scrollbar-button //滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。（位置2）
+    ::-webkit-scrollbar-track  // 外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）
+    ::-webkit-scrollbar-track-piece  //内层轨道，滚动条中间部分（位置4）
+    ::-webkit-scrollbar-thumb //滚动条里面可以拖动的那部分（位置5）
+    ::-webkit-scrollbar-corner //边角（位置6）
+    ::-webkit-resizer //定义右下角拖动块的样式（位置7）
+
+    IE：
+    scrollbar-3dlight-color	IE特有属性	IE5.5+	y	设置滚动框的和滚动条箭头左上边缘的颜色
+    scrollbar-highlight-color	IE特有属性	IE5.5+	y	设置滚动框的和滚动条箭头左上边缘的颜色
+    scrollbar-face-color	IE特有属性	IE5.5+	y	设置滚动框和滚动条箭头的颜色
+    scrollbar-arrow-color	IE特有属性	IE5.5+	y	设置滚动条箭头的颜色
+    scrollbar-shadow-color	IE特有属性	IE5.5+	y	设置滚动框的和滚动条箭头右下边缘的颜色
+    scrollbar-dark-shadow-color	IE特有属性	IE5.5+	y	设置滚动条槽的颜色
+    scrollbar-base-color	IE特有属性	IE5.5+	y	设置滚动条主要构成部分的颜色
+    scrollbar-track-color	IE特有属性	IE5.5+	y	设置滚动条轨迹组成部分的颜色
+</pre>
+<div id="box" style="width: 400px;height: 300px;overflow: scroll;">
+    <div style="width: 500px;height: 400px;">
+        <h4>ie和谷歌中有不同的效果</h4>
+    </div>
+</div>
+</body>
+</html>
