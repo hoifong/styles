@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ccc;
+}
+.Cube{
+    position: absolute;
+    border:1px solid #666;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    /*perspective-origin: 10% 10%;*/
+    /*perspective: 1000px;*/
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: rotateX(45deg) rotateZ(0deg) rotateY(45deg) translate(-50%,-50%);
+}
+
+
+.unit{
+    position: absolute;
+    box-sizing: border-box;
+    width: 33.3%;
+    height: 33.3%;
+    border: 2px solid #000;
+    transition: 1s;
+}
+.grid1{
+    left:0;
+    top:0;
+    transform-origin: 150% 150% ;
+    background-color: red;
+}
+.grid2{
+    left:33.3%;
+    top:0;
+    transform-origin: 50% 150% ;
+}
+.grid3{
+    right:0;
+    top:0;
+    transform-origin: -50% 150% ;
+}
+.grid4{
+    left:0;
+    top:33.3%;
+    transform-origin: 150% 50% ;
+}
+.grid5{
+    left:33.3%;
+    top:33.3%;
+    transform-origin: 50% 50% ;
+}
+.grid6{
+    right: 0;
+    top:33.3%;
+    transform-origin: -50% 50% ;
+}
+.grid7{
+    left:0;
+    bottom: 0;
+    transform-origin: 150% -50% ;
+}
+.grid8{
+    left:33.3%;
+    bottom: 0;
+    transform-origin: 50% -50% ;
+}
+.grid9{
+    right:0;
+    bottom: 0;
+    transform-origin: -50% -50% ;
+}
+/*初始位置*/
+.front{
+    transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+
+.back{
+    transform:rotateX(0deg) rotateY(180deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.left{
+    transform:rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.right{
+    transform:rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.top{
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.bottom{
+    transform: rotateX(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+/*颜色*/
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.gray{
+    background-color: darkslategray;
+}
+.green{
+    background-color: green;
+}
+.white{
+    background-color: white;
+}
+.orange{
+    background-color: orange;
+}
+
+/*转底面*/
+.Cube:hover .bottom{
+    transform: rotateY(90deg) rotateX(-90deg)   rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.Cube:hover .front+.grid7,.Cube:hover .front+.grid8,.Cube:hover .front+.grid9{
+    transform:rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.Cube:hover .left+.grid7,.Cube:hover .left+.grid8,.Cube:hover .left+.grid9{
+    transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.Cube:hover .right+.grid7,.Cube:hover .right+.grid8,.Cube:hover .right+.grid9{
+    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+.Cube:hover .back+.grid7,.Cube:hover .back+.grid8,.Cube:hover .back+.grid9{
+    transform:rotateX(0deg) rotateY(270deg) rotateZ(0deg) translate3d(0, 0, 100px);
+}
+/*转整体*/
+.Cube:hover{
+    transform: rotateX(45deg) rotateZ(0deg) rotateY(135deg) translate(-50%,-50%);;
+}
