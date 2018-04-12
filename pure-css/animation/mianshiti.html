@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯实习生面试遇到的题</title>
+    <style>
+        #box{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            background-color: red;
+            top: 0;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        @keyframes anima {
+            0%{
+                /*top: 0;*/
+                /*left: 50%;*/
+                /*width: 50px;*/
+                /*height: 50px;*/
+            }
+            50%{
+                top:50%;
+                left:50%;
+                width: 50px;
+                height: 50px;
+            }
+            100%{
+                top:50%;
+                left:50%;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .anima {
+            animation: anima 5s infinite;
+        }
+    </style>
+</head>
+<body>
+<h2>面试腾讯实习生时遇到题</h2>
+<p>
+    从上方掉落一个盒子，掉到中间时变大。
+</p>
+<button id="click">点击</button>
+<script>
+    var btn = document.getElementById("click");
+    btn.onclick = function () {
+        var box = document.getElementById("box");
+        box.classList.add("anima");
+    };
+</script>
+<div id="box">
+</div>
+</body>
+</html>

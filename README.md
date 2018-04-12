@@ -15,7 +15,7 @@
 [animation]:https://hoifong.github.io/styles/pure-css/animation
 >### 动画
 - [3D旋转-魔方](https://hoifong.github.io/styles/pure-css/animation/magic-squre.html)
-- .
+- [面试腾讯实习生时遇到的动画题](https://hoifong.github.io/styles/pure-css/animation/mianshiti.html)
 - .
 
 
